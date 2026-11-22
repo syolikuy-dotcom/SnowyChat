@@ -1,0 +1,11 @@
+node_modules/
+.next/
+.env
+sessions.db
+sessions.db.bak
+sessions.db.tmp
+sessions.db.corrupt-*
+logs/
+*.log
+next-env.d.ts
+*.tsbuildinfo
