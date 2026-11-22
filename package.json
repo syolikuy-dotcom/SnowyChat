@@ -1,0 +1,42 @@
+{
+  "name": "snowychat",
+  "version": "2.0.0",
+  "description": "SnowyChat — Minecraft AFK bot control panel (Next.js full-stack + Mineflayer + Socket.IO)",
+  "private": true,
+  "main": "index.js",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch-path=./server --watch-path=./server.mjs index.js --dev",
+    "build": "next build",
+    "setup": "npm install --include=dev && npm run build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "verify": "npm run lint && npm run typecheck && npm test && npm run build",
+    "deps:check": "node scripts/deps.mjs check",
+    "deps:update": "node scripts/deps.mjs update"
+  },
+  "dependencies": {
+    "lucide-react": ">=0.468.0 <1.0.0",
+    "minecraft-protocol": "^1.66.2",
+    "mineflayer": "^4.37.1",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "socket.io": "^4.8.3",
+    "socket.io-client": "^4.8.3",
+    "sql.js": "^1.14.1",
+    "vec3": "^0.1.10"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^16.0.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.9.0"
+  }
+}
